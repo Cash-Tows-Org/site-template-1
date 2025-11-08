@@ -1,0 +1,16 @@
+{
+  "name": "template-1-lt",
+  "version": "1.0.0",
+  "description": "Template 1 - Clean/Modern Towing Website",
+  "scripts": {
+    "start": "http-server -p 3001 -o",
+    "dev": "http-server -p 3001 -o"
+  },
+  "keywords": ["towing", "roadside-assistance", "website"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+

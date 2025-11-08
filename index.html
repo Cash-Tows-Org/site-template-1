@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Towing & Roadside in {{SERVICE_CITY}} | {{BUSINESS_NAME}}</title>
+  <meta name="description" content="{{ABOUT_SHORT}} Fast towing and roadside assistance in {{SERVICE_CITY}}. 24/7 service. Call {{PHONE_PRIMARY}}.">
+  <link rel="icon" type="image/png" href="{{LOGO_URL}}">
+  <link rel="preload" href="{{HERO_PHOTO_URL}}" as="image">
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} Logo">
+          <span>{{BUSINESS_NAME}}</span>
+        </a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="services/towing.html">Light-Duty Towing</a></li>
+                <li><a href="services/roadside-assistance.html">Roadside Assistance</a></li>
+                <li><a href="services/jump-start.html">Jump Start</a></li>
+                <li><a href="services/tire-change.html">Tire Change</a></li>
+                <li><a href="services/fuel-delivery.html">Fuel Delivery</a></li>
+                <li><a href="services/lockout.html">Lockout</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html#dispatch" class="nav-link">Request a Service</a>
+            </li>
+          </ul>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+        <a href="tel:{{PHONE_PRIMARY}}" class="btn btn-primary header-cta" data-track="cta-top">
+          Call Now: {{PHONE_PRIMARY}}
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+  <section class="hero">
+    <div class="container">
+      <h1>Towing & Roadside in {{SERVICE_CITY}} — Call {{PHONE_PRIMARY}}</h1>
+      <p>{{ABOUT_SHORT}}</p>
+      <div class="trust-badges">
+        <span>Local • Fast ETAs • Upfront Pricing</span>
+      </div>
+      <div class="hero-buttons">
+        <a href="tel:{{PHONE_PRIMARY}}" class="btn btn-primary" data-track="call-click">
+          Call Now
+        </a>
+        <a href="#quote-form" class="btn btn-secondary" data-track="cta-mid">
+          Free Quote
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview Grid -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1rem;">Our Services</h2>
+        <p style="max-width: 750px; margin: 0 auto; color: var(--text-light); font-size: 1.125rem; line-height: 1.8;">Fast, reliable roadside help when you need it most in {{SERVICE_CITY}}.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Light-Duty Towing</h3>
+          <p>Professional towing for cars, SUVs, and small trucks. Fast response throughout {{SERVICE_CITY}}.</p>
+          <a href="services/towing.html">Learn More <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛟</div>
+          <h3>Roadside Assistance</h3>
+          <p>Complete roadside help for any emergency. We're here 24/7 when you need us most.</p>
+          <a href="services/roadside-assistance.html">Learn More <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔋</div>
+          <h3>Jump Start</h3>
+          <p>Dead battery? We'll get you running quickly with our professional jump start service.</p>
+          <a href="services/jump-start.html">Learn More <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛞</div>
+          <h3>Tire Change</h3>
+          <p>Flat tire? Our experts change it fast and safely so you can get back on the road.</p>
+          <a href="services/tire-change.html">Learn More <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⛽</div>
+          <h3>Fuel Delivery</h3>
+          <p>Out of gas? We'll bring fuel to your location anywhere in {{SERVICE_CITY}}.</p>
+          <a href="services/fuel-delivery.html">Learn More <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔓</div>
+          <h3>Lockout Service</h3>
+          <p>Locked out? We'll get you back in quickly without damaging your vehicle.</p>
+          <a href="services/lockout.html">Learn More <span>→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-choose">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1rem;">Why Choose Us</h2>
+        <p style="max-width: 700px; margin: 0 auto; color: var(--text-light); font-size: 1.125rem;">Local expertise. Fast service. Fair prices. That's our promise.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast ETAs</h3>
+          <p>Average response time under 30 minutes in {{SERVICE_CITY}}. We know time matters when you're stranded.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Transparent Pricing</h3>
+          <p>No surprises. Get upfront pricing before we dispatch. Honest rates you can trust.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Real Local Techs</h3>
+          <p>24/7 availability with real local technicians who know {{SERVICE_CITY}} streets. Not a call center.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Dispatch Form -->
+  <section id="quote-form" class="section">
+    <div class="container">
+      <div class="contact-form-container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <h2 style="margin-bottom: 0.75rem;">Get a Free Quote</h2>
+          <p style="color: var(--text-light); font-size: 1.0625rem; line-height: 1.7;">Fill out the form below and we'll dispatch a service vehicle to your location. Typical ETA in {{SERVICE_CITY}}: 30–60 minutes depending on traffic.</p>
+        </div>
+        
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" autocomplete="name">
+            <span class="form-error-message" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel" pattern="[0-9\-\(\)\s]+">
+            <span class="form-error-message" id="phone-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service...</option>
+              <option value="towing">Light-Duty Towing</option>
+              <option value="roadside-assistance">Roadside Assistance</option>
+              <option value="jump-start">Jump Start</option>
+              <option value="tire-change">Tire Change</option>
+              <option value="fuel-delivery">Fuel Delivery</option>
+              <option value="lockout">Lockout Service</option>
+            </select>
+            <span class="form-error-message" id="service-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="pickup">Pickup Address *</label>
+            <textarea id="pickup" name="pickup" rows="3" required placeholder="Street address, city, zip code"></textarea>
+            <span class="form-error-message" id="pickup-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit-btn" data-track="dispatch-submit">
+            <span class="btn-text">Request Service</span>
+            <span class="btn-loader" style="display: none;">⏳</span>
+          </button>
+
+          <div id="form-success" class="form-success">
+            ✅ Thank you! We've received your request and will contact you shortly.
+          </div>
+
+          <div id="form-error" class="form-error">
+            ⚠️ There was an error submitting your request. Please try again or call us directly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1rem;">What Our Customers Say</h2>
+        <p style="color: var(--text-light); font-size: 1.0625rem;">Real feedback from {{SERVICE_CITY}} drivers</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Showed up fast."</p>
+          <p class="testimonial-author">— J***, {{SERVICE_CITY}}</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Fair price, no surprises."</p>
+          <p class="testimonial-author">— M***, {{SERVICE_CITY}}</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"Got me back on the road quickly."</p>
+          <p class="testimonial-author">— S***, {{SERVICE_CITY}}</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 2rem; color: var(--text-light); font-size: 0.9375rem;">Google reviews sync coming soon.</p>
+    </div>
+  </section>
+
+  <!-- Coverage / Map Blurb -->
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container" style="text-align: center;">
+      <p style="font-size: 1.125rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">Serving {{SERVICE_CITY}} and nearby (≈ {{SERVICE_RADIUS}} miles).</p>
+    </div>
+  </section>
+
+  <!-- Final CTA Block -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Need Help Now?</h2>
+      <p>Call us immediately for fast assistance in {{SERVICE_CITY}}. We're available 24/7.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+        <a href="tel:{{PHONE_PRIMARY}}" class="btn btn-primary" data-track="cta-bottom">
+          Call Now
+        </a>
+        <a href="#quote-form" class="btn btn-secondary" data-track="cta-bottom">
+          Free Quote
+        </a>
+      </div>
+      <p style="font-size: 1.5rem; font-weight: 600; margin-top: 2rem; color: white;">{{PHONE_PRIMARY}}</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>{{BUSINESS_NAME}}</h3>
+          <p>Serving {{SERVICE_CITY}} and surrounding areas within {{SERVICE_RADIUS}} miles.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <a href="services/towing.html">Light-Duty Towing</a>
+          <a href="services/roadside-assistance.html">Roadside Assistance</a>
+          <a href="services/jump-start.html">Jump Start</a>
+          <a href="services/tire-change.html">Tire Change</a>
+          <a href="services/fuel-delivery.html">Fuel Delivery</a>
+          <a href="services/lockout.html">Lockout Service</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <a href="tel:{{PHONE_PRIMARY}}" data-track="call-click">Call: {{PHONE_PRIMARY}}</a>
+          <a href="mailto:{{EMAIL}}">Email: {{EMAIL}}</a>
+          <a href="contact.html">Contact Form</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{YEAR}} {{BUSINESS_NAME}} • {{SERVICE_CITY}} • {{EMAIL}}</p>
+        <div class="footer-actions">
+          <button onclick="sendLocationEmail()" class="btn btn-secondary" data-track="send-location-click">Send My Location</button>
+          <a href="tel:{{PHONE_PRIMARY}}" class="btn btn-primary" data-track="call-click">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <!-- Sticky Mobile Call Button -->
+  <a href="tel:{{PHONE_PRIMARY}}" class="mobile-call-btn" data-track="cta-bottom" aria-label="Call {{PHONE_PRIMARY}}">
+    Call {{PHONE_PRIMARY}}
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

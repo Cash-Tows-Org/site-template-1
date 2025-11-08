@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact {{BUSINESS_NAME}} — {{SERVICE_CITY}} Roadside Help</title>
+  <meta name="description" content="Contact {{BUSINESS_NAME}} for fast towing and roadside assistance in {{SERVICE_CITY}}. Call {{PHONE_PRIMARY}} or request service online.">
+  <link rel="icon" type="image/png" href="{{LOGO_URL}}">
+  <link rel="preload" href="{{HERO_PHOTO_URL}}" as="image">
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <img src="{{LOGO_URL}}" alt="{{BUSINESS_NAME}} Logo">
+          <span>{{BUSINESS_NAME}}</span>
+        </a>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle">Services</a>
+              <ul class="dropdown-menu">
+                <li><a href="services/towing.html">Light-Duty Towing</a></li>
+                <li><a href="services/roadside-assistance.html">Roadside Assistance</a></li>
+                <li><a href="services/jump-start.html">Jump Start</a></li>
+                <li><a href="services/tire-change.html">Tire Change</a></li>
+                <li><a href="services/fuel-delivery.html">Fuel Delivery</a></li>
+                <li><a href="services/lockout.html">Lockout</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link active">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html#dispatch" class="nav-link">Request a Service</a>
+            </li>
+          </ul>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+        <a href="tel:{{PHONE_PRIMARY}}" class="btn btn-primary header-cta" data-track="cta-top">
+          Call Now: {{PHONE_PRIMARY}}
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Hero -->
+  <main id="main-content">
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Contact {{BUSINESS_NAME}} — {{SERVICE_CITY}} Roadside Help</h1>
+      <p>We're here 24/7. Call {{PHONE_PRIMARY}} for immediate assistance or fill out the form below for a quick response.</p>
+    </div>
+  </section>
+
+  <!-- Contact Methods -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+        <div style="text-align: center; padding: 3rem 2rem; background: var(--gradient-primary); color: white; border-radius: var(--radius-lg); box-shadow: 0 8px 24px var(--shadow-lg);">
+          <h2 style="color: white; margin-bottom: 1rem; font-size: 1.75rem;">Call Us</h2>
+          <p style="font-size: 2rem; font-weight: 700; margin: 1.5rem 0;">
+            <a href="tel:{{PHONE_PRIMARY}}" style="color: white; text-decoration: none;" data-track="call-click">{{PHONE_PRIMARY}}</a>
+          </p>
+          <p style="opacity: 0.95; margin-bottom: 1.5rem;">Available 24/7 for immediate help</p>
+          <a href="tel:{{PHONE_PRIMARY}}" class="btn" style="background: white; color: var(--brand);" data-track="call-click">Call Now</a>
+        </div>
+        <div style="text-align: center; padding: 3rem 2rem; background: white; border: 2px solid var(--border); border-radius: var(--radius-lg); box-shadow: 0 4px 16px var(--shadow);">
+          <h2 style="margin-bottom: 1rem; font-size: 1.75rem;">Email Us</h2>
+          <p style="font-size: 1.125rem; color: var(--text-light); margin: 1.5rem 0;">
+            <a href="mailto:{{EMAIL}}" style="color: var(--brand); font-weight: 600;">{{EMAIL}}</a>
+          </p>
+          <p style="color: var(--text-light); margin-bottom: 1.5rem;">We'll respond within 24 hours</p>
+          <a href="mailto:{{EMAIL}}" class="btn btn-secondary">Send Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote / Dispatch Form -->
+  <section id="dispatch" class="section">
+    <div class="container">
+      <div class="contact-form-container">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <h2 style="margin-bottom: 0.75rem;">Request Service</h2>
+          <p style="color: var(--text-light); font-size: 1.0625rem; line-height: 1.7;">Fill out the form below and we'll dispatch a service vehicle to your location. Typical ETA in {{SERVICE_CITY}}: 30–60 minutes depending on traffic.</p>
+        </div>
+        
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" autocomplete="name">
+            <span class="form-error-message" id="name-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567" autocomplete="tel" pattern="[0-9\-\(\)\s]+">
+            <span class="form-error-message" id="phone-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed *</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service...</option>
+              <option value="towing">Light-Duty Towing</option>
+              <option value="roadside-assistance">Roadside Assistance</option>
+              <option value="jump-start">Jump Start</option>
+              <option value="tire-change">Tire Change</option>
+              <option value="fuel-delivery">Fuel Delivery</option>
+              <option value="lockout">Lockout Service</option>
+            </select>
+            <span class="form-error-message" id="service-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="pickup">Pickup Address *</label>
+            <textarea id="pickup" name="pickup" rows="3" required placeholder="Street address, city, zip code"></textarea>
+            <span class="form-error-message" id="pickup-error"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit-btn" data-track="dispatch-submit">
+            <span class="btn-text">Request Service</span>
+            <span class="btn-loader" style="display: none;">⏳</span>
+          </button>
+
+          <div id="form-success" class="form-success">
+            ✅ Thank you! We've received your request and will contact you shortly.
+          </div>
+
+          <div id="form-error" class="form-error">
+            ⚠️ There was an error submitting your request. Please try again or call us directly.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1rem;">Frequently Asked Questions</h2>
+        <p style="color: var(--text-light); font-size: 1.0625rem;">Common questions about our services</p>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem; box-shadow: 0 2px 8px var(--shadow);">
+          <h3 style="margin-bottom: 1rem; color: var(--text);">How fast can you arrive?</h3>
+          <p style="color: var(--text-light); line-height: 1.7;">Average response time is 30–60 minutes in {{SERVICE_CITY}}, depending on traffic and your location. We prioritize urgent situations and work to get to you as quickly as possible.</p>
+        </div>
+        <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 1.5rem; box-shadow: 0 2px 8px var(--shadow);">
+          <h3 style="margin-bottom: 1rem; color: var(--text);">What will it cost?</h3>
+          <p style="color: var(--text-light); line-height: 1.7;">Rates vary by distance, vehicle type, and service needed. We provide upfront pricing over the phone before we dispatch, so you know exactly what to expect. No hidden fees.</p>
+        </div>
+        <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: 0 2px 8px var(--shadow);">
+          <h3 style="margin-bottom: 1rem; color: var(--text);">Do you take cards?</h3>
+          <p style="color: var(--text-light); line-height: 1.7;">Yes. We accept credit cards, debit cards, Apple Pay, and cash. Payment is collected on-site after service completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Need Help Right Now?</h2>
+      <p>Call us immediately for fast assistance in {{SERVICE_CITY}}. We're available 24/7.</p>
+      <a href="tel:{{PHONE_PRIMARY}}" class="btn" style="background: white; color: var(--brand); margin-top: 2rem;" data-track="call-click">
+        Call {{PHONE_PRIMARY}}
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>{{BUSINESS_NAME}}</h3>
+          <p>Serving {{SERVICE_CITY}} and surrounding areas within {{SERVICE_RADIUS}} miles.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <a href="services/towing.html">Light-Duty Towing</a>
+          <a href="services/roadside-assistance.html">Roadside Assistance</a>
+          <a href="services/jump-start.html">Jump Start</a>
+          <a href="services/tire-change.html">Tire Change</a>
+          <a href="services/fuel-delivery.html">Fuel Delivery</a>
+          <a href="services/lockout.html">Lockout Service</a>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <a href="tel:{{PHONE_PRIMARY}}" data-track="call-click">Call: {{PHONE_PRIMARY}}</a>
+          <a href="mailto:{{EMAIL}}">Email: {{EMAIL}}</a>
+          <a href="contact.html">Contact Form</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{YEAR}} {{BUSINESS_NAME}} • {{SERVICE_CITY}} • {{EMAIL}}</p>
+        <div class="footer-actions">
+          <button onclick="sendLocationEmail()" class="btn btn-secondary" data-track="send-location-click">Send My Location</button>
+          <a href="tel:{{PHONE_PRIMARY}}" class="btn btn-primary" data-track="call-click">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </main>
+
+  <!-- Sticky Mobile Call Button -->
+  <a href="tel:{{PHONE_PRIMARY}}" class="mobile-call-btn" data-track="cta-bottom" aria-label="Call {{PHONE_PRIMARY}}">
+    Call {{PHONE_PRIMARY}}
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
