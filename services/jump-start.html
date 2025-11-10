@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANGUAGE_CODE}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jump Start in {{SERVICE_CITY}} | {{BUSINESS_NAME}}</title>
   <meta name="description" content="Fast jump start service in {{SERVICE_CITY}}. Dead battery? We'll get you running quickly. 24/7. Upfront pricing. Call {{PHONE_PRIMARY}}.">
+  <meta name="template-id" content="{{TEMPLATE_ID}}">
+  <meta name="site-id" content="{{SITE_ID}}">
   <link rel="icon" type="image/png" href="{{LOGO_URL}}">
   <link rel="preload" href="{{HERO_PHOTO_URL}}" as="image">
   <link rel="stylesheet" href="../assets/css/shared.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body>
+<body data-theme="{{MODE}}">
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Header -->
   <header class="header">
@@ -150,7 +152,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>{{BUSINESS_NAME}}</h3>
-          <p>Serving {{SERVICE_CITY}} and surrounding areas within {{SERVICE_RADIUS}} miles.</p>
+          <p>Serving {{SERVICE_CITY}} and surrounding areas within {{SERVICE_RADIUS_KM}} km.</p>
         </div>
         <div class="footer-section">
           <h3>Services</h3>

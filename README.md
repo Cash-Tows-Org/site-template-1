@@ -62,38 +62,53 @@ Once the server is running, you can access the site at:
 
 ## Customization
 
-### Content Tokens
+### Token Reference
 
-Replace these tokens throughout the HTML files with your actual business information:
+All business-specific content is expressed as double-curly tokens so automation can replace values in one pass. The table below maps the tokens used in this template to the `public.free_websites` table (or derived values):
 
-- `{{BUSINESS_NAME}}` - Your business name
-- `{{PHONE_PRIMARY}}` - Primary phone number
-- `{{SERVICE_CITY}}` - Your service city
-- `{{SERVICE_RADIUS}}` - Service radius in miles
-- `{{ABOUT_SHORT}}` - Short about description
-- `{{EMAIL}}` - Business email
-- `{{YEAR}}` - Current year
+| Token | Description | Source |
+| --- | --- | --- |
+| `{{SITE_ID}}` | Unique site identifier | `free_websites.id` |
+| `{{TEMPLATE_ID}}` | Template identifier | `free_websites.template_id` |
+| `{{REPO_SLUG}}` | Repository/package slug (kebab-case) | Derived from business name + city |
+| `{{LANGUAGE_CODE}}` | IETF language tag (e.g. `en`, `es`) | `free_websites.meta->>'language_code'` (fallback `en`) |
+| `{{MODE}}` | Color mode (`light` \| `dark`) | `free_websites.mode` |
+| `{{BUSINESS_NAME}}` | Display name shown on-site | `free_websites.business_name` (generated column) |
+| `{{PHONE_PRIMARY}}` | Primary phone / dispatch line | `free_websites.customer_phone` |
+| `{{EMAIL}}` | Public contact email | `free_websites.customer_email` |
+| `{{SERVICE_CITY}}` | Primary service city | `free_websites.service_city` |
+| `{{SERVICE_RADIUS_KM}}` | Service radius in kilometers | `free_websites.service_radius_km` |
+| `{{ABOUT_SHORT}}` | Short intro/hero blurb | `free_websites.meta->>'about_short'` |
+| `{{HERO_PHOTO_URL}}` | Hero image source URL | `free_websites.meta->>'hero_photo_url'` |
+| `{{LOGO_URL}}` | Logo image source URL | `free_websites.logo_path` (absolute URL) |
+| `{{PRIMARY_COLOR}}` | Primary brand color (hex) | `free_websites.primary_color` |
+| `{{ACCENT_COLOR}}` | Accent color (hex) | `free_websites.accent_color` |
+| `{{YEAR}}` | Copyright year | runtime value or `meta->>'year'` |
 
-### Images
+> ℹ️ If a source value is missing, the automation layer should inject a sensible default before publishing. Tokens should not remain unreplaced in production.
 
-Replace the placeholder images:
-- `assets/img/hero.jpg` - Hero image (recommended: 1920x1080px)
-- `assets/img/logo.png` - Logo image (recommended: 200x200px, transparent background)
+A machine-readable copy of this map is stored in `template.tokens.json` for builder scripts.
 
-### Colors
+### Assets
 
-Edit CSS variables in `assets/css/shared.css` to customize colors:
+- `assets/img/hero.jpg` — optional local fallback if you do not provide `{{HERO_PHOTO_URL}}`
+- `assets/img/logo.png` — optional local fallback if you do not provide `{{LOGO_URL}}`
 
-```css
-:root {
-  --brand: #2563eb;      /* Brand color */
-  --accent: #06b6d4;     /* Accent color */
-  --bg: #ffffff;         /* Background */
-  --text: #1f2937;       /* Text color */
-  --muted: #6b7280;      /* Muted text */
-  --card: #f9fafb;       /* Card background */
-}
-```
+### Theme & Mode
+
+Colors are controlled through custom properties in `assets/css/shared.css`. Set `{{PRIMARY_COLOR}}`, `{{ACCENT_COLOR}}`, and `{{MODE}}` (`light` or `dark`) for each deployment. The stylesheet includes auto dark-mode adjustments when `data-theme="dark"` is present on the `<body>` tag.
+
+### Automation Playbook
+
+When cloning this template for a new customer, the bot should:
+
+1. Copy the repository into a new workspace.
+2. Replace every token listed above (HTML, CSS, JS, JSON) with business-specific values from `free_websites`.
+3. Regenerate the project slug (`{{REPO_SLUG}}`) from the business name + city (kebab-case) and update `package.json` plus the new GitHub repository name.
+4. Swap image assets if the customer provided branded media.
+5. Push to a new GitHub repository named `{{REPO_SLUG}}` (or similar) under the correct organization/user.
+
+Keep this repository tokenized—do not commit concrete customer data here.
 
 ## Build & Deploy
 

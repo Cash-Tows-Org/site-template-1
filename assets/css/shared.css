@@ -1,9 +1,9 @@
 /* CSS Variables for Theming */
 :root {
-  --brand: #2563eb;
-  --accent: #3b82f6;
-  --brand-dark: #1e40af;
-  --accent-light: #60a5fa;
+  --brand: {{PRIMARY_COLOR}};
+  --accent: {{ACCENT_COLOR}};
+  --brand-dark: {{PRIMARY_COLOR}};
+  --accent-light: {{ACCENT_COLOR}};
   --bg: #ffffff;
   --bg-alt: #f8fafc;
   --text: #1e293b;
@@ -20,13 +20,30 @@
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;
-  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-  --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  --gradient-primary: linear-gradient(135deg, {{PRIMARY_COLOR}} 0%, {{ACCENT_COLOR}} 100%);
+  --gradient-accent: linear-gradient(135deg, {{ACCENT_COLOR}} 0%, {{PRIMARY_COLOR}} 100%);
   --radius-sm: 0.375rem;
   --radius: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
+}
+
+body[data-theme="dark"] {
+  --bg: #0f172a;
+  --bg-alt: #111c2f;
+  --text: #e2e8f0;
+  --text-light: #cbd5f5;
+  --muted: #a5b4fc;
+  --card: #1e293b;
+  --card-hover: #253044;
+  --border: rgba(148, 163, 184, 0.24);
+  --border-light: rgba(148, 163, 184, 0.16);
+  --shadow: rgba(2, 6, 23, 0.55);
+  --shadow-md: rgba(2, 6, 23, 0.65);
+  --shadow-lg: rgba(2, 6, 23, 0.75);
+  --shadow-xl: rgba(2, 6, 23, 0.85);
+  color-scheme: dark;
 }
 
 /* Base Styles */

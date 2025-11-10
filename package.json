@@ -1,7 +1,7 @@
 {
-  "name": "template-1-lt",
+  "name": "{{REPO_SLUG}}",
   "version": "1.0.0",
-  "description": "Template 1 - Clean/Modern Towing Website",
+  "description": "{{BUSINESS_NAME}} — {{SERVICE_CITY}} Roadside Template",
   "scripts": {
     "start": "http-server -p 3001 -o",
     "dev": "http-server -p 3001 -o"

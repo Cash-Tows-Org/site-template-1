@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANGUAGE_CODE}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Towing & Roadside in {{SERVICE_CITY}} | {{BUSINESS_NAME}}</title>
   <meta name="description" content="{{ABOUT_SHORT}} Fast towing and roadside assistance in {{SERVICE_CITY}}. 24/7 service. Call {{PHONE_PRIMARY}}.">
+  <meta name="template-id" content="{{TEMPLATE_ID}}">
+  <meta name="site-id" content="{{SITE_ID}}">
   <link rel="icon" type="image/png" href="{{LOGO_URL}}">
   <link rel="preload" href="{{HERO_PHOTO_URL}}" as="image">
   <link rel="stylesheet" href="assets/css/shared.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body data-theme="{{MODE}}">
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Header -->
   <header class="header">
@@ -238,7 +240,7 @@
   <!-- Coverage / Map Blurb -->
   <section class="section" style="background: var(--bg-alt);">
     <div class="container" style="text-align: center;">
-      <p style="font-size: 1.125rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">Serving {{SERVICE_CITY}} and nearby (≈ {{SERVICE_RADIUS}} miles).</p>
+      <p style="font-size: 1.125rem; color: var(--text-light); max-width: 600px; margin: 0 auto;">Serving {{SERVICE_CITY}} and nearby areas within {{SERVICE_RADIUS_KM}} km.</p>
     </div>
   </section>
 
@@ -265,7 +267,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>{{BUSINESS_NAME}}</h3>
-          <p>Serving {{SERVICE_CITY}} and surrounding areas within {{SERVICE_RADIUS}} miles.</p>
+          <p>Serving {{SERVICE_CITY}} and surrounding areas within {{SERVICE_RADIUS_KM}} km.</p>
         </div>
         <div class="footer-section">
           <h3>Services</h3>
