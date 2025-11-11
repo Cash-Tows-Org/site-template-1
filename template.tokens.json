@@ -59,11 +59,11 @@
       "notes": "Displayed across hero copy and service blurbs."
     },
     {
-      "token": "{{SERVICE_RADIUS_KM}}",
+      "token": "{{SERVICE_RADIUS}}",
       "source": "free_websites.service_radius_km",
       "required": false,
-      "default": 30,
-      "notes": "Displayed in km; convert to miles in downstream automations if needed."
+      "default": 32,
+      "notes": "Stored in kilometers; convert to miles for display."
     },
     {
       "token": "{{ABOUT_SHORT}}",

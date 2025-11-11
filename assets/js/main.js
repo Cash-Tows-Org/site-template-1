@@ -18,8 +18,160 @@ function trackEvent(event, path) {
   });
 }
 
+function normalizeDigits(value) {
+  return (value || '').toString().replace(/\D+/g, '');
+}
+
+function formatPhoneNumberDisplay(digits) {
+  if (!digits) return null;
+  if (digits.length === 11 && digits.startsWith('1')) {
+    digits = digits.slice(1);
+  }
+  if (digits.length === 10) {
+    return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+  if (digits.length === 7) {
+    return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+  }
+  return digits;
+}
+
+function buildTelHref(digits) {
+  if (!digits) return null;
+  if (digits.length === 11 && digits.startsWith('1')) {
+    return `tel:+${digits}`;
+  }
+  if (digits.length === 10) {
+    return `tel:+1${digits}`;
+  }
+  return `tel:${digits}`;
+}
+
+function applyPrimaryPhoneFormatting() {
+  const body = document.body;
+  if (!body) return;
+  const rawPhone = body.dataset.phonePrimary;
+  if (!rawPhone || rawPhone.includes('{{')) {
+    return;
+  }
+
+  const digits = normalizeDigits(rawPhone);
+  if (!digits) return;
+
+  const formatted = formatPhoneNumberDisplay(digits);
+  if (!formatted) return;
+
+  if (typeof document.createTreeWalker !== 'function' || typeof NodeFilter === 'undefined') {
+    return;
+  }
+
+  const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (!node.nodeValue) continue;
+    const replaced = node.nodeValue
+      .split(rawPhone).join(formatted)
+      .split(digits).join(formatted);
+    if (replaced !== node.nodeValue) {
+      node.nodeValue = replaced;
+    }
+  }
+
+  document.querySelectorAll('a[href^=\"tel:\"]').forEach(link => {
+    const telHref = buildTelHref(digits);
+    if (telHref) {
+      link.setAttribute('href', telHref);
+    }
+
+    if (link.hasAttribute('aria-label')) {
+      const label = link.getAttribute('aria-label');
+      if (label) {
+        const updated = label.split(rawPhone).join(formatted).split(digits).join(formatted);
+        if (updated !== label) {
+          link.setAttribute('aria-label', updated);
+        }
+      }
+    }
+  });
+
+  body.dataset.phonePrimaryFormatted = formatted;
+}
+
+function formatMilesFromKm(kmValue) {
+  const km = parseFloat(kmValue);
+  if (!Number.isFinite(km) || km <= 0) return null;
+  const miles = km * 0.621371;
+  return miles >= 10 ? Math.round(miles).toString() : miles.toFixed(1).replace(/\\.0$/, '');
+}
+
+function applyServiceRadiusFormatting() {
+  const body = document.body;
+  if (!body) return;
+  const rawRadius = body.dataset.serviceRadius;
+  if (!rawRadius || rawRadius.includes('{{')) {
+    return;
+  }
+
+  const unit = (body.dataset.serviceRadiusUnit || 'km').toLowerCase();
+  const replacement = unit === 'km' ? formatMilesFromKm(rawRadius) : rawRadius;
+  if (!replacement) return;
+
+  if (unit === 'km') {
+    body.dataset.serviceRadiusMiles = replacement;
+  }
+
+  if (typeof document.createTreeWalker !== 'function' || typeof NodeFilter === 'undefined') {
+    return;
+  }
+
+  const walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (!node.nodeValue) continue;
+    const updated = node.nodeValue.split(rawRadius).join(replacement);
+    if (updated !== node.nodeValue) {
+      node.nodeValue = updated;
+    }
+  }
+}
+
+function applyThemeOverrides() {
+  const body = document.body;
+  if (!body) return;
+  const primary = body.dataset.primaryColor;
+  const accent = body.dataset.accentColor;
+  const root = document.documentElement;
+
+  const hasPrimary = primary && !primary.includes('{{');
+  const hasAccent = accent && !accent.includes('{{');
+
+  if (!hasPrimary && !hasAccent) {
+    return;
+  }
+
+  if (hasPrimary) {
+    root.style.setProperty('--brand', primary.trim());
+    root.style.setProperty('--brand-dark', primary.trim());
+  }
+
+  if (hasAccent) {
+    root.style.setProperty('--accent', accent.trim());
+    root.style.setProperty('--accent-light', accent.trim());
+  }
+
+  const gradientPrimary = `linear-gradient(135deg, ${hasPrimary ? primary.trim() : 'var(--brand)'} 0%, ${hasAccent ? accent.trim() : (hasPrimary ? primary.trim() : 'var(--accent)')} 100%)`;
+  const gradientAccent = `linear-gradient(135deg, ${hasAccent ? accent.trim() : (hasPrimary ? primary.trim() : 'var(--accent)')} 0%, ${hasPrimary ? primary.trim() : 'var(--brand)'} 100%)`;
+
+  root.style.setProperty('--gradient-primary', gradientPrimary);
+  root.style.setProperty('--gradient-accent', gradientAccent);
+}
+
 // Initialize analytics tracking on page load
 document.addEventListener('DOMContentLoaded', function() {
+  applyThemeOverrides();
+  applyPrimaryPhoneFormatting();
+  applyServiceRadiusFormatting();
+
   // Mobile menu toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const navList = document.querySelector('.nav-list');

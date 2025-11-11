@@ -17,6 +17,8 @@
   --shadow-md: rgba(0, 0, 0, 0.12);
   --shadow-lg: rgba(0, 0, 0, 0.16);
   --shadow-xl: rgba(0, 0, 0, 0.24);
+  --brand-shadow-soft: color-mix(in srgb, var(--brand) 30%, transparent);
+  --brand-shadow-strong: color-mix(in srgb, var(--brand) 45%, transparent);
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;

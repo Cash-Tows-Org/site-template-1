@@ -77,7 +77,7 @@ All business-specific content is expressed as double-curly tokens so automation 
 | `{{PHONE_PRIMARY}}` | Primary phone / dispatch line | `free_websites.customer_phone` |
 | `{{EMAIL}}` | Public contact email | `free_websites.customer_email` |
 | `{{SERVICE_CITY}}` | Primary service city | `free_websites.service_city` |
-| `{{SERVICE_RADIUS_KM}}` | Service radius in kilometers | `free_websites.service_radius_km` |
+| `{{SERVICE_RADIUS}}` | Service radius in miles | `free_websites.service_radius_km` (convert to miles) |
 | `{{ABOUT_SHORT}}` | Short intro/hero blurb | `free_websites.meta->>'about_short'` |
 | `{{HERO_PHOTO_URL}}` | Hero image source URL | `free_websites.meta->>'hero_photo_url'` |
 | `{{LOGO_URL}}` | Logo image source URL | `free_websites.logo_path` (absolute URL) |
