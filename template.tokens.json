@@ -1,0 +1,108 @@
+{
+  "templateId": "template-1-lt",
+  "description": "Machine-readable token map for Template 1 (light theme)",
+  "tokens": [
+    {
+      "token": "{{SITE_ID}}",
+      "source": "free_websites.id",
+      "required": true,
+      "notes": "UUID used to correlate deployments and database records."
+    },
+    {
+      "token": "{{TEMPLATE_ID}}",
+      "source": "free_websites.template_id",
+      "required": true,
+      "notes": "Should match templateId; used for auditing which template was applied."
+    },
+    {
+      "token": "{{REPO_SLUG}}",
+      "source": "derived",
+      "required": true,
+      "notes": "Lowercase, kebab-case string built from business name + city (e.g., tow-hero-denver)."
+    },
+    {
+      "token": "{{LANGUAGE_CODE}}",
+      "source": "free_websites.meta->>'language_code'",
+      "required": false,
+      "default": "en",
+      "notes": "IETF language tag used on <html lang>."
+    },
+    {
+      "token": "{{MODE}}",
+      "source": "free_websites.mode",
+      "required": false,
+      "default": "light",
+      "notes": "Accepts 'light' or 'dark'. Controls theme overrides."
+    },
+    {
+      "token": "{{BUSINESS_NAME}}",
+      "source": "free_websites.business_name",
+      "required": true,
+      "notes": "Generated column resolves to public name or legal name."
+    },
+    {
+      "token": "{{PHONE_PRIMARY}}",
+      "source": "free_websites.customer_phone",
+      "required": true,
+      "notes": "Format with callable digits; used for tel: links."
+    },
+    {
+      "token": "{{EMAIL}}",
+      "source": "free_websites.customer_email",
+      "required": true,
+      "notes": "Used for contact mailto link and location webhook."
+    },
+    {
+      "token": "{{SERVICE_CITY}}",
+      "source": "free_websites.service_city",
+      "required": true,
+      "notes": "Displayed across hero copy and service blurbs."
+    },
+    {
+      "token": "{{SERVICE_RADIUS}}",
+      "source": "free_websites.service_radius_km",
+      "required": false,
+      "default": 32,
+      "notes": "Stored in kilometers; convert to miles for display."
+    },
+    {
+      "token": "{{ABOUT_SHORT}}",
+      "source": "free_websites.meta->>'about_short'",
+      "required": false,
+      "notes": "Short marketing blurb for hero section."
+    },
+    {
+      "token": "{{HERO_PHOTO_URL}}",
+      "source": "free_websites.meta->>'hero_photo_url'",
+      "required": false,
+      "notes": "Remote hero image; ensure CORS-friendly host."
+    },
+    {
+      "token": "{{LOGO_URL}}",
+      "source": "free_websites.logo_path",
+      "required": false,
+      "notes": "Transparent PNG/SVG recommended."
+    },
+    {
+      "token": "{{PRIMARY_COLOR}}",
+      "source": "free_websites.primary_color",
+      "required": false,
+      "default": "#2563eb",
+      "notes": "Hex string used for brand gradients."
+    },
+    {
+      "token": "{{ACCENT_COLOR}}",
+      "source": "free_websites.accent_color",
+      "required": false,
+      "default": "#3b82f6",
+      "notes": "Secondary hex color for gradients."
+    },
+    {
+      "token": "{{YEAR}}",
+      "source": "derived",
+      "required": true,
+      "notes": "Current calendar year or explicit override."
+    }
+  ]
+}
+
