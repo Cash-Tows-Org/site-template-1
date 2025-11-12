@@ -13,9 +13,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: "#4057BF",
-                        accent: "#6940BF",
-                        secondary: "#4096BF",
+                        primary: "{{PRIMARY_COLOR}}",
+                        accent: "{{ACCENT_COLOR}}",
+                        secondary: "{{ACCENT_COLOR}}",
                     }
                 }
             }
@@ -67,43 +67,43 @@
     <!-- ===== START: HEADER ===== -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-5 flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+            <div class="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {{BUSINESS_NAME}}
             </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-10">
                     <li>
-                        <a href="index.html" class="text-gray-700 hover:text-[#4057BF] transition-colors font-medium text-lg relative group">
+                        <a href="index.html" class="text-gray-700 hover:text-primary transition-colors font-medium text-lg relative group">
                             Home
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#4057BF] group-hover:w-full transition-all duration-300"></span>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                         </a>
                     </li>
                     <li class="relative services-dropdown">
-                        <button class="text-gray-700 hover:text-[#4057BF] transition-colors font-medium text-lg relative group flex items-center services-toggle">
+                        <button class="text-gray-700 hover:text-primary transition-colors font-medium text-lg relative group flex items-center services-toggle">
                             Services
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#4057BF] group-hover:w-full transition-all duration-300"></span>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                         </button>
                         <div class="services-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 py-2 hidden" id="services-dropdown">
                             <!-- SERVICE_MENU_ITEMS -->
                         </div>
                     </li>
                     <li>
-                        <a href="contact.html" class="text-gray-700 hover:text-[#4057BF] transition-colors font-medium text-lg relative group">
+                        <a href="contact.html" class="text-gray-700 hover:text-primary transition-colors font-medium text-lg relative group">
                             Contact
-                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-[#4057BF] transition-all duration-300"></span>
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-all duration-300"></span>
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="hidden md:block">
-                <a href="tel:{{PHONE_NUMBER}}" class="bg-gradient-to-r from-[#4057BF] to-[#6940BF] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:from-[#6940BF] hover:to-[#4096BF] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
+                <a href="tel:{{PHONE_NUMBER}}" class="bg-gradient-to-r from-primary to-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:from-accent hover:to-secondary transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
                     Call Now
                 </a>
             </div>
-            <button class="md:hidden text-gray-700 hover:text-[#4057BF] transition-colors mobile-menu-toggle">
+            <button class="md:hidden text-gray-700 hover:text-primary transition-colors mobile-menu-toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -112,18 +112,18 @@
         <div class="mobile-menu md:hidden bg-white py-6 px-4 shadow-lg border-t border-gray-100 hidden">
             <ul class="space-y-5">
                 <li>
-                    <a href="index.html" class="block text-gray-700 hover:text-[#4057BF] font-medium text-lg transition-colors">
+                    <a href="index.html" class="block text-gray-700 hover:text-primary font-medium text-lg transition-colors">
                         Home
                     </a>
                 </li>
                 <!-- MOBILE_SERVICE_MENU_ITEMS -->
                 <li>
-                    <a href="contact.html" class="block text-gray-700 hover:text-[#4057BF] font-medium text-lg transition-colors">
+                    <a href="contact.html" class="block text-gray-700 hover:text-primary font-medium text-lg transition-colors">
                         Contact
                     </a>
                 </li>
                 <li>
-                    <a href="tel:{{PHONE_NUMBER}}" class="block bg-gradient-to-r from-[#4057BF] to-[#6940BF] text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-[#6940BF] hover:to-[#4096BF] transition-all duration-300 shadow-md">
+                    <a href="tel:{{PHONE_NUMBER}}" class="block bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-accent hover:to-secondary transition-all duration-300 shadow-md">
                         Call Now
                     </a>
                 </li>
@@ -137,23 +137,23 @@
         <section class="relative py-12 md:py-16 lg:py-24 overflow-hidden">
             <!-- Animated background elements -->
             <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#4057BF]/20 to-[#6940BF]/20 rounded-full blur-3xl animate-pulse"></div>
-                <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-[#4096BF]/20 to-[#6940BF]/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-secondary/20 to-accent/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
             </div>
             <div class="container mx-auto px-4 text-center relative z-10">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-[#4057BF] to-[#6940BF] rounded-2xl mb-8 shadow-2xl transform hover:scale-110 transition-all duration-300">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-2xl mb-8 shadow-2xl transform hover:scale-110 transition-all duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-[#4057BF] via-[#6940BF] to-[#4096BF] bg-clip-text text-transparent leading-tight">
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-primary via-[#6940BF] to-secondary bg-clip-text text-transparent leading-tight">
                     Contact {{BUSINESS_NAME}} in {{CITY}}
                 </h1>
-                <div class="w-32 h-1.5 bg-gradient-to-r from-[#4057BF] via-[#6940BF] to-[#4096BF] mx-auto rounded-full mb-8"></div>
+                <div class="w-32 h-1.5 bg-gradient-to-r from-primary via-[#6940BF] to-secondary mx-auto rounded-full mb-8"></div>
                 <p class="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto font-light mb-8 md:mb-10 text-gray-700 leading-relaxed">
                     Content 1 Prompt: Write a compelling 1-2 sentence tagline for the contact page emphasizing friendly service, fast response, affordable rates, and free quotes.
                 </p>
-                <a href="tel:{{PHONE_NUMBER}}" class="inline-flex items-center bg-gradient-to-r from-[#4057BF] via-[#6940BF] to-[#4096BF] text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
+                <a href="tel:{{PHONE_NUMBER}}" class="inline-flex items-center bg-gradient-to-r from-primary via-[#6940BF] to-secondary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
@@ -168,7 +168,7 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-5xl mx-auto">
                     <div class="text-center mb-12">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                             Content 1 #3 Prompt: Write an H2 for the contact methods section (e.g., 'Get in Touch Fast', 'Contact Us Today').
                         </h2>
                         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -177,7 +177,7 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                         <!-- Phone CTA - Primary -->
-                        <a href="tel:{{PHONE_NUMBER}}" class="group relative bg-gradient-to-br from-[#4057BF] to-[#6940BF] text-white rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
+                        <a href="tel:{{PHONE_NUMBER}}" class="group relative bg-gradient-to-br from-primary to-accent text-white rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
                             <div class="absolute inset-0 bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                             <div class="relative px-8 py-10">
                                 <div class="flex items-center justify-center mb-4">
@@ -202,8 +202,8 @@
                             </div>
                         </a>
                         <!-- Email CTA - Secondary -->
-                        <a href="mailto:{{EMAIL_ADDRESS}}" class="group relative bg-white border-2 border-[#4096BF] text-[#4096BF] rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl hover:bg-gradient-to-br hover:from-[#4096BF] hover:to-[#4057BF] hover:text-white hover:border-transparent">
-                            <div class="absolute inset-0 bg-gradient-to-br from-[#4096BF]/10 to-[#4057BF]/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
+                        <a href="mailto:{{EMAIL_ADDRESS}}" class="group relative bg-white border-2 border-[#4096BF] text-[#4096BF] rounded-2xl overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl hover:bg-gradient-to-br hover:from-secondary hover:to-primary hover:text-white hover:border-transparent">
+                            <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-primary/10 transform scale-0 group-hover:scale-100 transition-transform duration-300 rounded-2xl"></div>
                             <div class="relative px-8 py-10">
                                 <div class="flex items-center justify-center mb-4">
                                     <div class="w-16 h-16 bg-[#4096BF]/10 group-hover:bg-white/20 rounded-2xl flex items-center justify-center transition-colors duration-300">
@@ -234,7 +234,7 @@
                     <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6 border-2 border-[#4057BF]/20">
                         <div class="flex items-center justify-center">
                             <div class="flex-shrink-0 mr-4">
-                                <div class="w-12 h-12 bg-gradient-to-br from-[#4057BF] to-[#6940BF] rounded-xl flex items-center justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
@@ -253,13 +253,13 @@
         <!-- ===== START: CONTACT FORM ===== -->
         <section class="py-16 md:py-24 relative overflow-hidden">
             <div class="absolute inset-0">
-                <div class="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-[#4057BF]/10 to-[#6940BF]/10 rounded-full blur-3xl"></div>
-                <div class="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-[#4096BF]/10 to-[#6940BF]/10 rounded-full blur-3xl"></div>
+                <div class="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-20 w-96 h-96 bg-gradient-to-tr from-secondary/10 to-accent/10 rounded-full blur-3xl"></div>
             </div>
             <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-3xl mx-auto">
                     <div class="text-center mb-8 md:mb-12">
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                             Content 1 #12 Prompt: Write an H2 for the contact form (e.g., 'Request a Free Quote', 'Get in Touch').
                         </h2>
                         <p class="text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed px-4">
@@ -305,7 +305,7 @@
                                 <textarea name="notes" rows="4" placeholder="Content 1 #23 Prompt: Write placeholder for notes field (e.g., 'Brief description of your issue', 'Tell us more about your situation')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 resize-none text-base md:text-lg group-hover:border-gray-300"></textarea>
                             </div>
                         </div>
-                        <button type="submit" class="w-full mt-6 md:mt-8 bg-gradient-to-r from-[#4057BF] via-[#6940BF] to-[#4096BF] text-white px-6 md:px-8 py-4 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
+                        <button type="submit" class="w-full mt-6 md:mt-8 bg-gradient-to-r from-primary via-[#6940BF] to-secondary text-white px-6 md:px-8 py-4 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
                             <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                             <span class="relative">Content 1 #24 Prompt: Write submit button text (e.g., 'Submit for Free Quote', 'Send Message', 'Get Quote').</span>
                         </button>
@@ -322,13 +322,13 @@
         <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Content 1 #25 Prompt: Write an H2 for the hours section (e.g., 'Hours & Availability', 'When We're Open').
                     </h2>
                     <div class="bg-white p-10 md:p-12 rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden group hover:shadow-3xl transition-all duration-300">
-                        <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-[#4057BF]/10 to-[#6940BF]/10 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500"></div>
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl transform translate-x-20 -translate-y-20 group-hover:scale-150 transition-transform duration-500"></div>
                         <div class="relative">
-                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#4057BF] to-[#6940BF] rounded-2xl mb-6 shadow-lg">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-2xl mb-6 shadow-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -336,7 +336,7 @@
                             <p class="text-xl md:text-2xl text-gray-700 mb-6 leading-relaxed font-medium">
                                 Content 1 #26 Prompt: Write hours and availability information emphasizing 24/7 service including holidays.
                             </p>
-                            <p class="text-lg md:text-xl text-[#4057BF] font-bold">
+                            <p class="text-lg md:text-xl text-primary font-bold">
                                 Service 1 #2 Prompt: Write emergency call-to-action encouraging users to call the hotline immediately for emergencies.
                             </p>
                         </div>
@@ -350,13 +350,13 @@
         <section class="py-16 md:py-24">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Serving {{CITY}} & Nearby Areas
                     </h2>
                     <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 p-10 md:p-12 relative overflow-hidden group hover:shadow-3xl transition-all duration-300">
-                        <div class="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-[#6940BF]/10 to-[#4096BF]/10 rounded-full blur-3xl transform -translate-x-20 translate-y-20 group-hover:scale-150 transition-transform duration-500"></div>
+                        <div class="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-accent/10 to-secondary/10 rounded-full blur-3xl transform -translate-x-20 translate-y-20 group-hover:scale-150 transition-transform duration-500"></div>
                         <div class="relative">
-                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#6940BF] to-[#4096BF] rounded-2xl mb-6 shadow-lg">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-2xl mb-6 shadow-lg">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -375,13 +375,13 @@
         <!-- ===== START: TRUST HIGHLIGHTS ===== -->
         <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     Why Customers Choose {{BUSINESS_NAME}}
                 </h2>
                 <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#4057BF] transition-all duration-300">
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#4057BF] to-[#6940BF] rounded-xl flex items-center justify-center text-white mr-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white mr-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
@@ -393,7 +393,7 @@
                     </div>
                     <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#6940BF] transition-all duration-300">
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#6940BF] to-[#4096BF] rounded-xl flex items-center justify-center text-white mr-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-accent to-secondary rounded-xl flex items-center justify-center text-white mr-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -405,7 +405,7 @@
                     </div>
                     <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#4096BF] transition-all duration-300">
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#4096BF] to-[#4057BF] rounded-xl flex items-center justify-center text-white mr-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center text-white mr-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
@@ -417,7 +417,7 @@
                     </div>
                     <div class="bg-gradient-to-br from-gray-50 to-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#4057BF] transition-all duration-300">
                         <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#4057BF] to-[#6940BF] rounded-xl flex items-center justify-center text-white mr-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center text-white mr-4">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                                 </svg>
@@ -435,7 +435,7 @@
         <!-- ===== START: FAQ ===== -->
         <section class="py-16 md:py-24">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     Content 1 #31 Prompt: Write an H2 for FAQ section (e.g., 'Frequently Asked Questions', 'Common Questions').
                 </h2>
                 <div class="max-w-4xl mx-auto space-y-6">
@@ -472,7 +472,7 @@
         <section class="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
             <div class="container mx-auto px-4">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                         Content 1 #35 Prompt: Write an H2 for map section (e.g., 'Find Us', 'Our Location').
                     </h2>
                     <p class="text-xl text-gray-700 mb-10 leading-relaxed">
@@ -490,7 +490,7 @@
 
         <!-- ===== START: FINAL CTA ===== -->
         <section class="relative py-20 md:py-28 overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#4057BF] via-[#6940BF] to-[#4096BF]"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-[#6940BF] to-secondary"></div>
             <div class="absolute inset-0 opacity-20">
                 <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
                 <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
@@ -502,7 +502,7 @@
                 <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-light text-white/95 leading-relaxed">
                     Content 1 #39 Prompt: Write final CTA description emphasizing team availability, fast arrival, affordable rates, and free quotes.
                 </p>
-                <a href="tel:{{PHONE_NUMBER}}" class="inline-flex items-center bg-white text-[#4057BF] px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-110 shadow-xl group">
+                <a href="tel:{{PHONE_NUMBER}}" class="inline-flex items-center bg-white text-primary px-12 py-6 rounded-2xl text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-110 shadow-xl group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
@@ -517,7 +517,7 @@
     <footer class="bg-gradient-to-b from-gray-50 to-gray-100 py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-[#4057BF] to-[#6940BF] bg-clip-text text-transparent">
+                <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     {{BUSINESS_NAME}}
                 </h3>
                 <p class="mb-3 text-gray-700 font-medium text-lg">
@@ -528,13 +528,13 @@
                 </p>
             </div>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mt-10">
-                <button id="find-location-btn" class="bg-gradient-to-r from-[#4096BF] to-[#4057BF] text-white px-8 py-4 rounded-xl flex items-center justify-center hover:from-[#4057BF] hover:to-[#6940BF] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
+                <button id="find-location-btn" class="bg-gradient-to-r from-secondary to-primary text-white px-8 py-4 rounded-xl flex items-center justify-center hover:from-primary hover:to-accent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                     </svg>
                     Content 1 #41 Prompt: Write location finder button text (e.g., 'Find My Location', 'Share Location').
                 </button>
-                <a href="tel:{{PHONE_NUMBER}}" class="bg-gradient-to-r from-[#4057BF] to-[#6940BF] text-white px-8 py-4 rounded-xl flex items-center justify-center hover:from-[#6940BF] hover:to-[#4096BF] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
+                <a href="tel:{{PHONE_NUMBER}}" class="bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-xl flex items-center justify-center hover:from-accent hover:to-secondary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
@@ -552,7 +552,7 @@
 
     <!-- Sticky Mobile CTA Bar -->
     <div class="mobile-cta-sticky md:hidden">
-        <a href="tel:{{PHONE_NUMBER}}" class="w-full bg-white text-[#4057BF] py-3 px-6 rounded-lg font-bold text-center transition-all hover:bg-gray-50 flex items-center justify-center gap-2">
+        <a href="tel:{{PHONE_NUMBER}}" class="w-full bg-white text-primary py-3 px-6 rounded-lg font-bold text-center transition-all hover:bg-gray-50 flex items-center justify-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
