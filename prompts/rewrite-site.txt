@@ -41,8 +41,11 @@ Return JSON keyed by page id (`home`, `service-{{slug}}`, `contact`). Each value
   "contact": { ... }
 }
 
+CRITICAL: You MUST return a value for EVERY field in TEMPLATE_FIELDS. Do not skip any fields. If a field is missing from your response, the prompt will remain in the final website.
+
 Validate before responding:
-• All prompts replaced with user-facing copy.
+• ALL fields from TEMPLATE_FIELDS have corresponding entries in your JSON response.
+• All prompts replaced with user-facing copy (no "Prompt:" text remaining).
 • Alt text fields populated.
 • CTA labels specific to service/location.
 • Service page copy highlights the specific service in {{SERVICE_AREA}}.
