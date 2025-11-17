@@ -102,6 +102,12 @@
       "source": "derived",
       "required": true,
       "notes": "Current calendar year or explicit override."
+    },
+    {
+      "token": "{{GOOGLE_MAPS_API_KEY}}",
+      "source": "settings.google_maps_api_key",
+      "required": true,
+      "notes": "Google Maps JavaScript API key with Maps JavaScript API and Places API enabled. Used for embedding interactive maps on contact page."
     }
   ]
 }
