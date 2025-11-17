@@ -49,7 +49,7 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: #4057BF;
+                background: {{ACCENT_COLOR}};
                 padding: 1rem;
                 box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
                 z-index: 40;
@@ -69,65 +69,65 @@
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- ===== START: HEADER ===== -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-accent shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-5 flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-bold text-primary">
+            <div class="text-xl md:text-2xl font-bold text-white">
                 {{BUSINESS_NAME}}
             </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-10">
                     <li>
-                        <a href="../index.html" class="text-gray-700 hover:text-primary transition-colors font-medium text-lg relative group">
+                        <a href="../index.html" class="text-white/90 hover:text-white transition-colors font-medium text-lg relative group">
                             Home
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                         </a>
                     </li>
                     <li class="relative services-dropdown">
-                        <button class="text-gray-700 hover:text-primary transition-colors font-medium text-lg relative group flex items-center services-toggle">
+                        <button class="text-white/90 hover:text-white transition-colors font-medium text-lg relative group flex items-center services-toggle">
                             Services
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                             </svg>
-                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transition-all duration-300"></span>
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-white transition-all duration-300"></span>
                         </button>
                         <div class="services-menu absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 py-2 hidden" id="services-dropdown">
                             <!-- SERVICE_MENU_ITEMS -->
                         </div>
                     </li>
                     <li>
-                        <a href="../contact.html" class="text-gray-700 hover:text-primary transition-colors font-medium text-lg relative group">
+                        <a href="../contact.html" class="text-white/90 hover:text-white transition-colors font-medium text-lg relative group">
                             Contact
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="hidden md:block">
-                <a href="tel:{{PHONE_NUMBER}}" class="bg-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-accent transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
+                <a href="tel:{{PHONE_NUMBER}}" class="bg-primary text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
                     Call Now
                 </a>
             </div>
-            <button class="md:hidden text-gray-700 hover:text-primary transition-colors mobile-menu-toggle">
+            <button class="md:hidden text-white hover:text-white/80 transition-colors mobile-menu-toggle">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
-        <div class="mobile-menu md:hidden bg-white py-6 px-4 shadow-lg border-t border-gray-100 hidden">
+        <div class="mobile-menu md:hidden bg-accent py-6 px-4 shadow-lg border-t border-accent/20 hidden">
             <ul class="space-y-5">
                 <li>
-                    <a href="../index.html" class="block text-gray-700 hover:text-primary font-medium text-lg transition-colors">
+                    <a href="../index.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
                         Home
                     </a>
                 </li>
                 <!-- MOBILE_SERVICE_MENU_ITEMS -->
                 <li>
-                    <a href="../contact.html" class="block text-gray-700 hover:text-primary font-medium text-lg transition-colors">
+                    <a href="../contact.html" class="block text-white hover:text-white/80 font-medium text-lg transition-colors">
                         Contact
                     </a>
                 </li>
                 <li>
-                    <a href="tel:{{PHONE_NUMBER}}" class="block bg-primary text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-accent transition-all duration-300 shadow-md">
+                    <a href="tel:{{PHONE_NUMBER}}" class="block bg-primary text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-white hover:text-accent transition-all duration-300 shadow-md">
                         Call Now
                     </a>
                 </li>
@@ -668,34 +668,34 @@
     </main>
 
     <!-- ===== START: FOOTER ===== -->
-    <footer class="bg-gray-50 py-16">
+    <footer class="bg-accent py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold mb-4 text-primary">
+                <h3 class="text-2xl font-bold mb-4 text-white">
                     {{BUSINESS_NAME}}
                 </h3>
-                <p class="mb-3 text-gray-700 font-medium text-lg">
+                <p class="mb-3 text-white/90 font-medium text-lg">
                     {{MAIN_LOCATION}} | {{PHONE_NUMBER}}
                 </p>
-                <p class="text-gray-600">
+                <p class="text-white/80">
                     Serving the greater {{CITY}} area - Licensed and insured.
                 </p>
             </div>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mt-10">
-                <button id="find-location-btn" class="bg-primary text-white px-8 py-4 rounded-xl flex items-center justify-center hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
+                <button id="find-location-btn" class="bg-primary text-white px-8 py-4 rounded-xl flex items-center justify-center hover:bg-white hover:text-accent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                     </svg>
                     Find My Location
                 </button>
-                <a href="tel:{{PHONE_NUMBER}}" class="bg-primary text-white px-8 py-4 rounded-xl flex items-center justify-center hover:bg-accent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
+                <a href="tel:{{PHONE_NUMBER}}" class="bg-primary text-white px-8 py-4 rounded-xl flex items-center justify-center hover:bg-white hover:text-accent transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                     Call Now
                 </a>
             </div>
-            <div class="mt-12 text-center text-gray-600 border-t border-gray-300 pt-8">
+            <div class="mt-12 text-center text-white/80 border-t border-white/20 pt-8">
                 <p class="font-medium">
                     &copy; <span id="current-year"></span> {{BUSINESS_NAME}}. All rights reserved.
                 </p>
@@ -706,7 +706,7 @@
 
     <!-- Sticky Mobile CTA Bar -->
     <div class="mobile-cta-sticky md:hidden">
-        <a href="tel:{{PHONE_NUMBER}}" class="w-full bg-white text-primary py-3 px-6 rounded-lg font-bold text-center transition-all hover:bg-gray-50 flex items-center justify-center gap-2">
+        <a href="tel:{{PHONE_NUMBER}}" class="w-full bg-primary text-white py-3 px-6 rounded-lg font-bold text-center transition-all hover:bg-white hover:text-accent flex items-center justify-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
