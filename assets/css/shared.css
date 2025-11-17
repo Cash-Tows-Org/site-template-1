@@ -22,8 +22,8 @@
   --success: #10b981;
   --error: #ef4444;
   --warning: #f59e0b;
-  --gradient-primary: linear-gradient(135deg, {{PRIMARY_COLOR}} 0%, {{ACCENT_COLOR}} 100%);
-  --gradient-accent: linear-gradient(135deg, {{ACCENT_COLOR}} 0%, {{PRIMARY_COLOR}} 100%);
+  --gradient-primary: {{PRIMARY_COLOR}};
+  --gradient-accent: {{ACCENT_COLOR}};
   --radius-sm: 0.375rem;
   --radius: 0.5rem;
   --radius-md: 0.75rem;
