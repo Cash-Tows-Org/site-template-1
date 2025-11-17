@@ -28,24 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Find Location Button
-    const findLocationBtn = document.getElementById('find-location-btn');
-    if (findLocationBtn) {
-        findLocationBtn.addEventListener('click', function() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
-                    window.open(`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`, '_blank');
-                }, function(error) {
-                    console.error('Error finding location:', error);
-                    alert('Unable to find your location. Please check your browser permissions.');
-                });
-            } else {
-                alert('Geolocation is not supported by this browser.');
-            }
-        });
-    }
     
     // Set current year in footer
     const currentYearElement = document.getElementById('current-year');
