@@ -31,6 +31,25 @@
             animation: float 3s ease-in-out infinite;
         }
         
+        /* Service Hero Image Responsive Styles */
+        .service-hero-image-desktop {
+            display: none;
+        }
+        
+        .service-hero-image-mobile {
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .service-hero-image-desktop {
+                display: block;
+            }
+            
+            .service-hero-image-mobile {
+                display: none;
+            }
+        }
+        
         /* Enhanced Mobile Styles */
         @media (max-width: 768px) {
             body {
@@ -139,17 +158,26 @@
     <main class="flex-grow">
         <!-- ===== START: HERO SECTION ===== -->
         <section class="relative min-h-screen flex items-center py-16 md:py-20 overflow-hidden bg-primary">
-            <!-- Animated background elements -->
-            <div class="absolute inset-0 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 overflow-hidden z-0">
+                <!-- Desktop Image -->
+                <img src="{{SERVICE_HERO_PHOTO_URL_DESKTOP}}" alt="{{PROMPT: Write alt text for service hero image.}}" class="absolute inset-0 w-full h-full object-cover service-hero-image-desktop" onerror="this.style.display='none';">
+                <!-- Mobile Image -->
+                <img src="{{SERVICE_HERO_PHOTO_URL_MOBILE}}" alt="{{PROMPT: Write alt text for service hero image.}}" class="absolute inset-0 w-full h-full object-cover service-hero-image-mobile" onerror="this.style.display='none';">
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-black/70"></div>
+            </div>
+            <!-- Animated background elements (fallback if no image) -->
+            <div class="absolute inset-0 overflow-hidden z-0" style="display: none;">
                 <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/30 rounded-full blur-3xl animate-pulse"></div>
                 <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/30 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/5 rounded-full blur-2xl"></div>
             </div>
             <!-- Decorative grid pattern -->
-            <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 opacity-10 z-0">
                 <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
             </div>
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     <!-- Left side - Content -->
                     <div class="text-white space-y-8">
