@@ -151,8 +151,8 @@
                 </h1>
                 <div class="w-32 h-1.5 bg-primary mx-auto rounded-full mb-8"></div>
                 <p class="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto font-light mb-8 md:mb-10 text-gray-700 leading-relaxed">
-                    Content {{PROMPT: Write a compelling 1-2 sentence tagline for the contact page emphasizing friendly service, fast response, affordable rates, and free quotes.
-                }}</p>
+                    {{PROMPT: Write a compelling 1-2 sentence tagline for the contact page emphasizing friendly service, fast response, affordable rates, and free quotes.}}
+                    </p>
                 <a href="tel:{{PHONE_NUMBER}}" class="inline-flex items-center bg-primary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -272,37 +272,37 @@
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for name field (e.g., 'Full Name', 'Your Name').}}
                                 </label>
-                                <input type="text" name="name" placeholder="{{PROMPT: Write placeholder for name field (e.g., 'Your full name', 'Enter your name')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />}}
+                                <input type="text" name="name" placeholder="{{PROMPT: Write placeholder for name field (e.g., 'Your full name', 'Enter your name').}}" class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
                             </div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for phone field (e.g., 'Phone Number', 'Contact Number').}}
                                 </label>
-                                <input type="tel" name="phone" placeholder="Stat {{PROMPT: Write placeholder for phone field (e.g., 'Your phone number', '(555) 123-4567')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
-                            }}</div>
+                                <input type="tel" name="phone" placeholder="{{PROMPT: Write placeholder for phone field (e.g., 'Your phone number', '(555) 123-4567').}}" class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
+                            </div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for email field (e.g., 'Email (optional)', 'Email Address').}}
                                 </label>
-                                <input type="email" name="email" placeholder="{{PROMPT: Write placeholder for email field (e.g., 'Your email address', 'name@example.com')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" />}}
+                                <input type="email" name="email" placeholder="{{PROMPT: Write placeholder for email field (e.g., 'Your email address', 'name@example.com').}}" class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" />
                             </div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for service field (e.g., 'Service Needed', 'Type of Service').}}
                                 </label>
-                                <input type="text" name="service" placeholder="Service {{PROMPT: Write placeholder for service field (e.g., 'Tow, jump start, tire change, lockout, etc.', 'What service do you need?')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
-                            }}</div>
+                                <input type="text" name="service" placeholder="{{PROMPT: Write placeholder for service field (e.g., 'Tow, jump start, tire change, lockout, etc.', 'What service do you need?').}}" class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
+                            </div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for location field (e.g., 'Location / Address', 'Your Location').}}
                                 </label>
-                                <input type="text" name="location" placeholder="{{PROMPT: Write placeholder for location field (e.g., 'Street address or nearest landmark', 'Where are you located?')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />}}
+                                <input type="text" name="location" placeholder="{{PROMPT: Write placeholder for location field (e.g., 'Street address or nearest landmark', 'Where are you located?').}}" class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
                             </div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for notes field (e.g., 'Notes (optional)', 'Additional Details').}}
                                 </label>
-                                <textarea name="notes" rows="4" placeholder="{{PROMPT: Write placeholder for notes field (e.g., 'Brief description of your issue', 'Tell us more about your situation')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 resize-none text-base md:text-lg group-hover:border-gray-300">}}</textarea>
+                                <textarea name="notes" rows="4" placeholder="{{PROMPT: Write placeholder for notes field (e.g., 'Brief description of your issue', 'Tell us more about your situation').}}" class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 resize-none text-base md:text-lg group-hover:border-gray-300"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="w-full mt-6 md:mt-8 bg-primary text-white px-6 md:px-8 py-4 md:py-5 rounded-xl md:rounded-2xl text-lg md:text-xl font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
