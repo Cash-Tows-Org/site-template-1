@@ -151,8 +151,8 @@
                 </h1>
                 <div class="w-32 h-1.5 bg-primary mx-auto rounded-full mb-8"></div>
                 <p class="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto font-light mb-8 md:mb-10 text-gray-700 leading-relaxed">
-                    Content 1 Prompt: Write a compelling 1-2 sentence tagline for the contact page emphasizing friendly service, fast response, affordable rates, and free quotes.
-                </p>
+                    Content {{PROMPT: Write a compelling 1-2 sentence tagline for the contact page emphasizing friendly service, fast response, affordable rates, and free quotes.
+                }}</p>
                 <a href="tel:{{PHONE_NUMBER}}" class="inline-flex items-center bg-primary text-white px-10 py-5 rounded-2xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl group">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 group-hover:rotate-12 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -278,8 +278,8 @@
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for phone field (e.g., 'Phone Number', 'Contact Number').}}
                                 </label>
-                                <input type="tel" name="phone" placeholder="Stat 1 Prompt: Write placeholder for phone field (e.g., 'Your phone number', '(555) 123-4567')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
-                            </div>
+                                <input type="tel" name="phone" placeholder="Stat {{PROMPT: Write placeholder for phone field (e.g., 'Your phone number', '(555) 123-4567')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
+                            }}</div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for email field (e.g., 'Email (optional)', 'Email Address').}}
@@ -290,8 +290,8 @@
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for service field (e.g., 'Service Needed', 'Type of Service').}}
                                 </label>
-                                <input type="text" name="service" placeholder="Service 1 Prompt: Write placeholder for service field (e.g., 'Tow, jump start, tire change, lockout, etc.', 'What service do you need?')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
-                            </div>
+                                <input type="text" name="service" placeholder="Service {{PROMPT: Write placeholder for service field (e.g., 'Tow, jump start, tire change, lockout, etc.', 'What service do you need?')." class="w-full px-4 md:px-6 py-3 md:py-4 border-2 border-gray-200 rounded-lg md:rounded-xl focus:border-[#4057BF] focus:ring-4 focus:ring-[#4057BF]/20 focus:outline-none transition-all duration-300 text-base md:text-lg group-hover:border-gray-300" required />
+                            }}</div>
                             <div class="group">
                                 <label class="block text-gray-800 font-bold mb-2 md:mb-3 text-base md:text-lg">
                                     {{PROMPT: Write form label for location field (e.g., 'Location / Address', 'Your Location').}}
@@ -310,8 +310,8 @@
                             <span class="relative">{{PROMPT: Write submit button text (e.g., 'Submit for Free Quote', 'Send Message', 'Get Quote').}}</span>
                         </button>
                         <p class="text-xs md:text-sm text-gray-600 text-center mt-4 md:mt-6 leading-relaxed px-2">
-                            CTA 1 Prompt: Write form disclaimer mentioning to call for emergencies and consent to be contacted.
-                        </p>
+                            CTA {{PROMPT: Write form disclaimer mentioning to call for emergencies and consent to be contacted.
+                        }}</p>
                     </form>
                 </div>
             </div>
@@ -337,8 +337,8 @@
                                 {{PROMPT: Write hours and availability information emphasizing 24/7 service including holidays.}}
                             </p>
                             <p class="text-lg md:text-xl text-primary font-bold">
-                                Service 1 #2 Prompt: Write emergency call-to-action encouraging users to call the hotline immediately for emergencies.
-                            </p>
+                                Service 1 #{{PROMPT: Write emergency call-to-action encouraging users to call the hotline immediately for emergencies.
+                            }}</p>
                         </div>
                     </div>
                 </div>
@@ -444,23 +444,23 @@
                             {{PROMPT: Write FAQ question #1 about service costs/pricing.}}
                         </summary>
                         <p class="mt-4 text-gray-700 leading-relaxed">
-                            Service 1 #3 Prompt: Write FAQ answer #1 emphasizing competitive rates, free quotes, transparent pricing, and no hidden fees.
-                        </p>
+                            Service 1 #{{PROMPT: Write FAQ answer #1 emphasizing competitive rates, free quotes, transparent pricing, and no hidden fees.
+                        }}</p>
                     </details>
                     <details class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#6940BF] transition-all duration-300">
                         <summary class="text-xl font-bold text-gray-900 cursor-pointer">
                             {{PROMPT: Write FAQ question #2 about response time.}}
                         </summary>
                         <p class="mt-4 text-gray-700 leading-relaxed">
-                            FAQ 1 Prompt: Write FAQ answer #2 mentioning typical 30-minute arrival time and encouraging direct calls for emergencies.
-                        </p>
+                            FAQ {{PROMPT: Write FAQ answer #2 mentioning typical 30-minute arrival time and encouraging direct calls for emergencies.
+                        }}</p>
                     </details>
                     <details class="bg-white p-6 md:p-8 rounded-2xl shadow-lg border-2 border-gray-100 hover:border-[#4096BF] transition-all duration-300">
                         <summary class="text-xl font-bold text-gray-900 cursor-pointer">
                             {{PROMPT: Write FAQ question #3 about service area coverage.}}
                         </summary>
                         <p class="mt-4 text-gray-700 leading-relaxed">
-                            Service 1 #4 Prompt: Write FAQ answer #3 referencing service area coverage of {{CITY}} and surrounding communities, encouraging users to call if unsure.
+                            Service 1 #{{PROMPT: Write FAQ answer #3 referencing service area coverage of {{CITY}} and surrounding communities, encouraging users to call if unsure.
                         </p>
                     </details>
                 </div>
