@@ -155,9 +155,31 @@ Use:
 
 American English
 
+7th-8th grade reading level:
+
+Write in simple, clear language that anyone can understand
+
+Use short sentences (12-18 words average)
+
+Avoid jargon, technical terms, and complex vocabulary
+
+Use common, everyday words (e.g., "help" not "assistance", "fast" not "expeditious")
+
+Break up long thoughts into multiple short sentences
+
 Concise sentences
 
 Tone: professional, confident, and as urgent as is natural for roadside, while matching {{BRAND_VOICE}}.
+
+Friendly, local, and helpful vibe:
+
+Sound like a trusted neighbor, not a corporate entity
+
+Use "we" and "you" to create connection
+
+Be warm and approachable while maintaining professionalism
+
+Show genuine care for the customer's stressful situation
 
 When a field asks for a value or headline with constraints (word count, character limit, content requirements), obey those constraints exactly.
 
