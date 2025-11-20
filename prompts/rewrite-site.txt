@@ -209,6 +209,8 @@ OUTPUT FORMAT
 
 Return JSON keyed by page id ("home", "service-{{slug}}", "contact").
 
+CRITICAL: You MUST include ALL page IDs that appear in TEMPLATE_FIELDS. Every page ID in TEMPLATE_FIELDS must have a corresponding entry in your JSON response. Do not skip any pages.
+
 Each value is an object whose keys exactly match the template field identifiers supplied by the bot.
 
 Example:
@@ -234,9 +236,15 @@ VALIDATION REQUIREMENTS (DO NOT SKIP)
 
 Before responding, you MUST ensure:
 
+ALL page IDs from TEMPLATE_FIELDS are present in your JSON response. Every page must be included.
+
 Every field from TEMPLATE_FIELDS exists in your JSON response.
 
 No missing keys.
+
+No missing pages.
+
+If a page ID exists in TEMPLATE_FIELDS, it must be included in the JSON with all its fields.
 
 If a field exists in TEMPLATE_FIELDS, it must be included in the JSON with final copy.
 
